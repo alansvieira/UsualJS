@@ -1,20 +1,20 @@
-function DateHelper(){
+"use strict"
+
+function Usual(){
 
 }
 
-DateHelper.prototype.isDate = function (txtDate){
+Usual.prototype.isDate = function (txtDate){
         var currVal = txtDate;
         if(currVal == '')
             return false;
   
-        //Declare Regex  
         var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/; 
-        var dtArray = currVal.match(rxDatePattern); // is format OK?
+        var dtArray = currVal.match(rxDatePattern); 
 
         if (dtArray == null)
             return false;
  
-        //Checks for dd/mm/yyyy format.
         var dtMonth = dtArray[3];
         var dtDay= dtArray[1];
         var dtYear = dtArray[5];
@@ -34,4 +34,4 @@ DateHelper.prototype.isDate = function (txtDate){
         return true;
 };
 
-module.exports = DateHelper;
+module.exports = Usual;

@@ -1,9 +1,9 @@
-describe("DateHelper", function() {
-  var Helper = require('../../lib/DateHelper/DateHelper');
+describe("Date  functions", function() {
+  var Usual = require('../../src/usualjs/Usual');
   var helper;
 
   beforeEach(function() {
-    helper = new Helper();
+    helper = new Usual();
   });
 
   it("should be a date when the is 02/02/1989", function() {
