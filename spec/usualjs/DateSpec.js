@@ -10,6 +10,8 @@ describe("Date  functions", function() {
     
     var result = helper.isDate('02/12/1989');
     expect(result).toEqual(true);
+	
+	console.log("should be a date when the is 02/02/1989 passed");
 
   });
   

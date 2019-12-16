@@ -34,4 +34,19 @@ Usual.prototype.isDate = function (txtDate){
         return true;
 };
 
+Usual.prototype.MapObject = function(data, template){	
+	
+	 var properties = [];
+        for (var key in data) {
+            if (data.hasOwnProperty(key) && typeof data[key] !== 'function') {
+                properties.push(key);
+            }
+        }
+        $.each(properties, function (i, v) {
+            template = template.replace("[" + v + "]", Reflect.get(data, v));
+        });
+
+        return template;	
+};
+
 module.exports = Usual;
