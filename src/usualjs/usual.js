@@ -49,4 +49,8 @@ Usual.prototype.MapObject = function(data, template){
         return template;	
 };
 
+Usual.prototype.isNumber = function(obj){
+    return !isNaN(obj)
+};
+
 module.exports = Usual;
